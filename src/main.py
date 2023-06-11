@@ -38,7 +38,7 @@ def main():
     for board in all_boards:
         if board.name == board_name:
             target_board = board
-            print("Board found! :" + board.id)
+            print("Board found: " + board.id)
             break
     else:
         print("Board not found")
@@ -51,7 +51,7 @@ def main():
     for list in target_board.list_lists():
         if list.name == list_name:
             target_list = list
-            print("List found! :" + list.id)
+            print("List found: " + list.id)
             break
     else:
         print("List not found")
@@ -64,7 +64,7 @@ def main():
         description = None
         if split_task[1:]:
             description = split_task[1]
-        result = target_list.add_card(task,description)
+        result = target_list.add_card(title,description)
         print("Added task: " + result.name + " (" + result.id +  ")" )
 
 
